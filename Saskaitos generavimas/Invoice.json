@@ -1,0 +1,25 @@
+[
+  {
+    "Id": 8206,
+    "OrderNumber": "Kl 8206",
+    "DateTime": "2022-10-24 13:22:30",
+    "PaymentOption": 30,
+    "Client": "Iki",
+    "Itemss": [
+      {
+        "Description": "Pienas",
+        "Quantyti": 1548,
+        "Price": 2.2,
+        "RowTotal": 3405.6000000000004
+      },
+      {
+        "Description": "Duona",
+        "Quantyti": 1256,
+        "Price": 1.38,
+        "RowTotal": 1733.28
+      }
+    ],
+    "InvoiceTotal": 5138.88,
+    "QtyTotal": 2804
+  }
+]

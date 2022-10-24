@@ -1,0 +1,72 @@
+[
+  {
+    "Id": 1,
+    "Address": "Balbieriškis",
+    "DateTime": "2022-01-19",
+    "PaymentTerms": 30,
+    "Client": "Šilas"
+  },
+  {
+    "Id": 2,
+    "Address": "Kaunas",
+    "DateTime": "2021-10-19",
+    "PaymentTerms": 45,
+    "Client": "Maxima"
+  },
+  {
+    "Id": 3,
+    "Address": "Jonava",
+    "DateTime": "2022-12-19",
+    "PaymentTerms": 60,
+    "Client": "Iki"
+  },
+  {
+    "Id": 4,
+    "Address": "Klaipeda",
+    "DateTime": "2021-09-19",
+    "PaymentTerms": 90,
+    "Client": "Depo"
+  },
+  {
+    "Id": 5,
+    "Address": "Panevezys",
+    "DateTime": "2019-10-19",
+    "PaymentTerms": 30,
+    "Client": "Senukai"
+  },
+  {
+    "Id": 6,
+    "Address": "Zatyšiai",
+    "DateTime": "2001-10-19",
+    "PaymentTerms": 30,
+    "Client": "Rimi"
+  },
+  {
+    "Id": 7,
+    "Address": "Alytus",
+    "DateTime": "2002-10-19",
+    "PaymentTerms": 120,
+    "Client": "Kesko"
+  },
+  {
+    "Id": 8,
+    "Address": "Vilnius",
+    "DateTime": "2008-10-19",
+    "PaymentTerms": 90,
+    "Client": "Sanitex"
+  },
+  {
+    "Id": 13,
+    "Address": "Vilnius",
+    "DateTime": "2008-10-19",
+    "PaymentTerms": 90,
+    "Client": "Procter"
+  },
+  {
+    "Id": 150,
+    "Address": "Jonava",
+    "DateTime": "2000-10-20",
+    "PaymentTerms": 250,
+    "Client": "Achema"
+  }
+]

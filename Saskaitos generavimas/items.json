@@ -1,0 +1,65 @@
+[
+  {
+    "Id": 1,
+    "InvoiceId": 1,
+    "Description": "Pienas",
+    "Price": 2.2,
+    "Producer": "Žemaitijos pienas"
+  },
+  {
+    "Id": 2,
+    "InvoiceId": 1,
+    "Description": "Duona",
+    "Price": 1.38,
+    "Producer": "Kėdainių duona"
+  },
+  {
+    "Id": 3,
+    "InvoiceId": 1,
+    "Description": "Batonas",
+    "Price": 0.38,
+    "Producer": "Krekenavos Batonas"
+  },
+  {
+    "Id": 4,
+    "InvoiceId": 1,
+    "Description": "Sūris",
+    "Price": 3.38,
+    "Producer": "Rokiškio sūris"
+  },
+  {
+    "Id": 5,
+    "InvoiceId": 1,
+    "Description": "Dešra",
+    "Price": 2.38,
+    "Producer": "Biovela"
+  },
+  {
+    "Id": 6,
+    "InvoiceId": 1,
+    "Description": "Kefyras",
+    "Price": 2.99,
+    "Producer": "Vylkiškiai"
+  },
+  {
+    "Id": 11,
+    "InvoiceId": 1,
+    "Description": "Snickers",
+    "Price": 2.99,
+    "Producer": "Nike"
+  },
+  {
+    "Id": 987,
+    "InvoiceId": 0,
+    "Description": "Papaja",
+    "Price": 14.25,
+    "Producer": "Mozambikas"
+  },
+  {
+    "Id": 999,
+    "InvoiceId": 0,
+    "Description": "Astra cigaretes",
+    "Price": 6.25,
+    "Producer": "Kazachstanas"
+  }
+]
