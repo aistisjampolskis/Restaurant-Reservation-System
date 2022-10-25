@@ -49,17 +49,59 @@
     "Producer": "Nike"
   },
   {
-    "Id": 987,
+    "Id": 78,
     "InvoiceId": 0,
-    "Description": "Papaja",
-    "Price": 14.25,
-    "Producer": "Mozambikas"
+    "Description": "Varske",
+    "Price": 45.25,
+    "Producer": "Birute"
   },
   {
-    "Id": 999,
+    "Id": 111,
     "InvoiceId": 0,
-    "Description": "Astra cigaretes",
-    "Price": 6.25,
-    "Producer": "Kazachstanas"
+    "Description": "Aliejus",
+    "Price": 78.25,
+    "Producer": "Baltijos"
+  },
+  {
+    "Id": 1254,
+    "InvoiceId": 0,
+    "Description": "Bulkutes",
+    "Price": 12.25,
+    "Producer": "Kepyklele"
+  },
+  {
+    "Id": 1255,
+    "InvoiceId": 0,
+    "Description": "Pica",
+    "Price": 1.25,
+    "Producer": "Picerija"
+  },
+  {
+    "Id": 1000,
+    "InvoiceId": 0,
+    "Description": "Silke",
+    "Price": 1.25,
+    "Producer": "Vici"
+  },
+  {
+    "Id": 987,
+    "InvoiceId": 0,
+    "Description": "Kokosas",
+    "Price": 1.29,
+    "Producer": "Peru"
+  },
+  {
+    "Id": 458,
+    "InvoiceId": 0,
+    "Description": "Rugpienis",
+    "Price": 12.28,
+    "Producer": "Pieno gamykla"
+  },
+  {
+    "Id": 157,
+    "InvoiceId": 0,
+    "Description": "Bananai",
+    "Price": 2.58,
+    "Producer": "CIli"
   }
 ]

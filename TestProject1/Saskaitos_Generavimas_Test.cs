@@ -21,6 +21,7 @@ namespace Saskaitos_Generavimas_Test
             ItemsRepository itemsRepository = new ItemsRepository();
             var item = new ListOfItem
             {
+               
                 Quantyti = qty,
                 Price = price,
             };

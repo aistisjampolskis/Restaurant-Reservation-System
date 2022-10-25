@@ -1,15 +1,54 @@
-﻿using System;
+﻿using Saskaitos_generavimas;
+using Saskaitos_generavimas.Entities;
+using Saskaitos_generavimas.Repositories;
+using Saskaitos_generavimas.Entities;
+using Saskaitos_generavimas.Repositories;
 using System.Collections.Generic;
-using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.IO;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using System.Xml.Linq;
+using System.Reflection.Metadata.Ecma335;
+using System.Globalization;
+using System.Numerics;
+using static System.Formats.Asn1.AsnWriter;
+using System.Text.Encodings.Web;
+using System.Text.Unicode;
+using System.ComponentModel;
+using Saskaitos_generavimas;
 using System.Text;
-using System.Threading.Tasks;
+using QuickType;
+using System.Linq;
+using System.Collections.Immutable;
+using System.Diagnostics;
+
+
 
 namespace Saskaitos_generavimas
 {
+
     public class Control
     {
-        /*public void Init()
+        public void Init()
         {
+            ItemsRepository itemsRepository = new ItemsRepository();
+            CustomerRepository customerRepository = new CustomerRepository();
+            InvoiceItem invoiceItem = new InvoiceItem();
+            ItemsOnInvoiceRepository itemsOnInvoiceRepository = new ItemsOnInvoiceRepository();
+            ListOfItem listOfItem = new ListOfItem();
+            RandomNumberGenerator randomNumberGenerator = new RandomNumberGenerator();
+            RandomNumberGenerator n = new RandomNumberGenerator();
+            CustomerFileRead customerFileRead = new CustomerFileRead();
+            CustomerFileReadValidation customerFileReadValidation = new CustomerFileReadValidation();
+            ItemReadListAddSaveInvoice itemReadListAddSaveInvoice = new ItemReadListAddSaveInvoice();
+            CreatingCustomer creatingCustomer = new CreatingCustomer();
+            CreatingItem creatingItem = new CreatingItem();
+            ItemRaportation itemRaportation = new ItemRaportation();
+            CustomerRaportation customerRaportation = new CustomerRaportation();
+            InvoicingRaportation invoicingRaportation = new InvoicingRaportation();
+            GetFullInvoisingById getFullInvoisingById = new GetFullInvoisingById();
+            bool toDoProgram = true;
             while (toDoProgram)
             {
                 Console.WriteLine("[1] Create Invoice\n[2] Create item\n[3] Create customer\n[4] Invoice Raport \n[5] Item Raport\n[6] Customer Raport \n[7] See Invoice by ID\n[8] Finish the program");
@@ -17,25 +56,25 @@ namespace Saskaitos_generavimas
                 switch (action)
                 {
                     case 1:
-                        CreateInvoice();
+                        itemReadListAddSaveInvoice.ItemReadListAddSaveInvoice2();
                         break;
                     case 2:
-                        CreateItem();
+                        creatingItem.CreatingItem2();
                         break;
                     case 3:
-                        CreateCustomer();
+                        creatingCustomer.CreateCustomer2();
                         break;
                     case 4:
-                        InvoicingRaport();
+                        invoicingRaportation.InvoiceRaport();
                         break;
                     case 5:
-                        ItemRaport();
+                        itemRaportation.ItemRaport();
                         break;
                     case 6:
-                        CustomerRaport();
+                        customerRaportation.CustomerRaport();
                         break;
                     case 7:
-                        GetFullInvoiceById();
+                        getFullInvoisingById.GetFullINvoiceById();
                         break;
                     case 8:
                         toDoProgram = false;
@@ -45,6 +84,6 @@ namespace Saskaitos_generavimas
                         break;
                 }
             }
-        }*/
+        }
     }
 }

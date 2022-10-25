@@ -87,10 +87,10 @@ namespace Saskaitos_generavimas
                         Console.WriteLine($"Purchase qty {qty}");
                         Itemss.Add(new ListOfItem()
                         {
-                            Description = itemsRepository.RetrieveById(itemId).Description,
-                            Quantyti = qty,
-                            Price = itemsRepository.RetrieveById(itemId).Price,
-                            RowTotal = qty * itemsRepository.RetrieveById(itemId).Price
+                           Description = itemsRepository.Load(itemId),
+                           Quantyti = qty,
+                           Price = itemsRepository.Load2(itemId),
+                           RowTotal = qty * itemsRepository.Load2(itemId),
                         });
                     }
                     if (action3 == 2)
@@ -102,14 +102,7 @@ namespace Saskaitos_generavimas
             double invoiceTotal = Itemss.Sum(x => x.RowTotal);
             int qtyTotal = Itemss.Sum(x => x.Quantyti);
             itemsOnInvoiceRepository.Save(new ItemOnInvoice(numb, version, date1.ToString("G"), advance,customerRepository.RetrieveById(yes).Client, Itemss, invoiceTotal, qtyTotal));
-            var options = new JsonSerializerOptions
-            {
-                Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.All),
-                WriteIndented = true
-            };
-            var jsonString = JsonSerializer.Serialize(itemsOnInvoiceRepository.RetrieveList(), options);
-            File.WriteAllText(@"C:\Users\aisti\OneDrive\Desktop\C#\Strukturos 2022-09-26\Saskaitos generavimas\Saskaitos generavimas\Saskaitos generavimas\Invoice.json", jsonString);
-            Console.WriteLine("Invoice.json file created");
+           
         }
     }
 }

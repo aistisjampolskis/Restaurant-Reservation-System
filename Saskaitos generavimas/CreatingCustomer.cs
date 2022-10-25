@@ -56,14 +56,15 @@ namespace Saskaitos_generavimas
             string dateTime = Console.ReadLine();
 
             customerRepository.Save(new Customer(id, address, dateTime, paymentTerms, client));
-            var options = new JsonSerializerOptions
-            {
-                Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.All),
-                WriteIndented = true
-            };
-            var jsonString = JsonSerializer.Serialize(customerRepository.RetrieveList(), options);
-            File.WriteAllText(@"C:\Users\aisti\OneDrive\Desktop\C#\Strukturos 2022-09-26\Saskaitos generavimas\Saskaitos generavimas\Saskaitos generavimas\Customers.json", jsonString);
-            Console.WriteLine("Customer.json file created");
+            /* var options = new JsonSerializerOptions
+             {
+                 Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.All),
+                 WriteIndented = true
+             };
+             var jsonString = JsonSerializer.Serialize(customerRepository.RetrieveList(), options);
+             File.WriteAllText(@"C:\Users\aisti\OneDrive\Desktop\C#\Strukturos 2022-09-26\Saskaitos generavimas\Saskaitos generavimas\Saskaitos generavimas\Customers.json", jsonString);
+             Console.WriteLine("Customer.json file created");
+         }*/
         }
     }
 }

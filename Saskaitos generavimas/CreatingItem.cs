@@ -53,14 +53,6 @@ namespace Saskaitos_generavimas
             Console.WriteLine("Enter item producer");
             string resultProducer = Console.ReadLine();
             itemsRepository.Save(new Item(id, invoiceId, description, resultPrice, resultProducer));
-            var options = new JsonSerializerOptions
-            {
-                Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.All),
-                WriteIndented = true
-            };
-            var jsonString = JsonSerializer.Serialize(itemsRepository.RetrieveList(), options);
-            File.WriteAllText(@"C:\Users\aisti\OneDrive\Desktop\C#\Strukturos 2022-09-26\Saskaitos generavimas\Saskaitos generavimas\Saskaitos generavimas\Items.json", jsonString);
-            Console.WriteLine("Items.json file created");
         }
     }
 }

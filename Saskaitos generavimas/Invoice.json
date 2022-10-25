@@ -1,25 +1,65 @@
 [
   {
-    "Id": 8206,
-    "OrderNumber": "Kl 8206",
-    "DateTime": "2022-10-24 13:22:30",
+    "Id": 6928,
+    "OrderNumber": "Kl 6928",
+    "DateTime": "2022-10-25 19:19:22",
+    "PaymentOption": 30,
+    "Client": "Šilas",
+    "Itemss": [
+      {
+        "Description": "Batonas",
+        "Quantyti": 20,
+        "Price": 0.38,
+        "RowTotal": 7.6
+      }
+    ],
+    "InvoiceTotal": 7.6,
+    "QtyTotal": 20
+  },
+  {
+    "Id": 8844,
+    "OrderNumber": "Kl 8844",
+    "DateTime": "2022-10-25 19:19:37",
+    "PaymentOption": 30,
+    "Client": "Kesko",
+    "Itemss": [
+      {
+        "Description": "Snickers",
+        "Quantyti": 125,
+        "Price": 2.99,
+        "RowTotal": 373.75
+      },
+      {
+        "Description": "Snickers",
+        "Quantyti": 256,
+        "Price": 2.99,
+        "RowTotal": 765.44
+      }
+    ],
+    "InvoiceTotal": 1139.19,
+    "QtyTotal": 381
+  },
+  {
+    "Id": 2314,
+    "OrderNumber": "Kl 2314",
+    "DateTime": "2022-10-25 19:20:31",
     "PaymentOption": 30,
     "Client": "Iki",
     "Itemss": [
       {
-        "Description": "Pienas",
-        "Quantyti": 1548,
-        "Price": 2.2,
-        "RowTotal": 3405.6000000000004
+        "Description": "Aliejus",
+        "Quantyti": 256,
+        "Price": 78.25,
+        "RowTotal": 20032.0
       },
       {
-        "Description": "Duona",
-        "Quantyti": 1256,
-        "Price": 1.38,
-        "RowTotal": 1733.28
+        "Description": "Varske",
+        "Quantyti": 258,
+        "Price": 45.25,
+        "RowTotal": 11674.5
       }
     ],
-    "InvoiceTotal": 5138.88,
-    "QtyTotal": 2804
+    "InvoiceTotal": 31706.5,
+    "QtyTotal": 514
   }
 ]

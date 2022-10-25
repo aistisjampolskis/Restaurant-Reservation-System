@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Encodings.Web;
+using System.Text.Json;
+using System.Text.Unicode;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using Saskaitos_generavimas.Entities;
 
 
@@ -40,7 +44,18 @@ namespace Saskaitos_generavimas.Repositories
 
         public void Save(Customer customer)
         {
-            Invoices.Add(customer);
+           // Invoices.Add(customer);
+            var options = new JsonSerializerOptions
+            {
+                Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.All),
+                WriteIndented = true
+            };
+            string path = @"C:\Users\aisti\OneDrive\Desktop\C#\Strukturos 2022-09-26\Saskaitos generavimas\Saskaitos generavimas\Saskaitos generavimas\Customers.json";
+            var jsonString = File.ReadAllText(path);
+            var list = JsonConvert.DeserializeObject<List<Customer>>(jsonString);
+            list.Add(customer);
+            var convertedJson = JsonConvert.SerializeObject(list, Formatting.Indented);
+            File.WriteAllText(path, convertedJson);
         }
 
        
