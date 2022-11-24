@@ -5,23 +5,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Saskaitos_generavimas.Entities
+namespace RestaurantReservationSystem.Entities
 {
     public class Customer
     {
         public int Id { get; set; }
-        public string Address { get; set; }
         public string DateTime { get; set; }
-        public int PaymentTerms { get; set; }
+        public int TableSeats { get; set; }
         public string Client { get; set; }
+        public int TableStatus { get; set; }
 
-        public Customer  (int id, string address, string dateTime, int paymentTerms, string client)
+        public Customer(int id, string dateTime, int paymentTerms, string client, int tableStatus)
         {
             Id = id;
-            Address = address;
             this.DateTime = dateTime;
-            PaymentTerms = paymentTerms;
+            TableSeats = paymentTerms;
             Client = client;
+            TableStatus = tableStatus;
         }
     }
 }

@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Saskaitos generavimas\Saskaitos_Generavimas.csproj" />
+    <ProjectReference Include="..\Saskaitos generavimas\RestaurantReservationSystem.csproj" />
   </ItemGroup>
 
 </Project>

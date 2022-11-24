@@ -1,25 +1,28 @@
-﻿using Saskaitos_generavimas.Entities;
+﻿using Newtonsoft.Json;
+using RestaurantReservationSystem.Entities;
 using System.Text;
+using System.Text.Encodings.Web;
 using System.Text.Json;
+using System.Text.Unicode;
 
-namespace Saskaitos_generavimas
+namespace RestaurantReservationSystem
 {
     public class CustomerFileRead
     {
-        public void CustomerFileReader()
+        public void CustumerFileReader()
         {
-            var incoming = new List<Customer>();
-            using (StreamReader r = new StreamReader(@"C:\Users\aisti\OneDrive\Desktop\C#\Strukturos 2022-09-26\Saskaitos generavimas\Saskaitos generavimas\Saskaitos generavimas\Customers.json"))
+            var options = new JsonSerializerOptions
             {
-                string json = r.ReadToEnd();
-                incoming = JsonSerializer.Deserialize<List<Customer>>(json);
-            }
-            if (incoming != null && incoming.Count > 0)
+                Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.All),
+                WriteIndented = true
+            };
+            string path = @"C:\Users\aisti\OneDrive\Desktop\C# Advanced\reservationtable\Saskaitos generavimas\Customers.json";
+            var jsonString = File.ReadAllText(path);
+            var list = JsonConvert.DeserializeObject<List<Customer>>(jsonString);
+            foreach (var item in list)
             {
-                foreach (var customer in incoming)
-                {
-                    Console.WriteLine($"{customer.Client}, #{customer.Id}");
-                }
+                if (item.TableStatus < 1)
+                    Console.WriteLine($"Table Number {item.Client}, Table ID {item.Id}");
             }
         }
     }

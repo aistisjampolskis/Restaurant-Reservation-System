@@ -1,65 +1,257 @@
 [
   {
-    "Id": 6928,
-    "OrderNumber": "Kl 6928",
-    "DateTime": "2022-10-25 19:19:22",
-    "PaymentOption": 30,
-    "Client": "Šilas",
+    "Id": 2828,
+    "OrderNumber": "Kl 2828",
+    "DateTime": "2022-11-18 16:29:07",
+    "PaymentOption": 6,
+    "Client": "11",
     "Itemss": [
       {
-        "Description": "Batonas",
+        "Description": "Tea",
         "Quantyti": 20,
-        "Price": 0.38,
-        "RowTotal": 7.6
+        "Price": 2.69,
+        "RowTotal": 53.8
       }
     ],
-    "InvoiceTotal": 7.6,
+    "InvoiceTotal": 53.8,
     "QtyTotal": 20
   },
   {
-    "Id": 8844,
-    "OrderNumber": "Kl 8844",
-    "DateTime": "2022-10-25 19:19:37",
-    "PaymentOption": 30,
-    "Client": "Kesko",
+    "Id": 6,
+    "OrderNumber": "Kl 6105",
+    "DateTime": "2022-11-18 16:48:10",
+    "PaymentOption": 5,
+    "Client": "6",
     "Itemss": [
       {
-        "Description": "Snickers",
-        "Quantyti": 125,
-        "Price": 2.99,
-        "RowTotal": 373.75
-      },
-      {
-        "Description": "Snickers",
-        "Quantyti": 256,
-        "Price": 2.99,
-        "RowTotal": 765.44
+        "Description": "Tea",
+        "Quantyti": 25,
+        "Price": 2.69,
+        "RowTotal": 67.25
       }
     ],
-    "InvoiceTotal": 1139.19,
-    "QtyTotal": 381
+    "InvoiceTotal": 67.25,
+    "QtyTotal": 25
   },
   {
-    "Id": 2314,
-    "OrderNumber": "Kl 2314",
-    "DateTime": "2022-10-25 19:20:31",
-    "PaymentOption": 30,
-    "Client": "Iki",
+    "Id": 7,
+    "OrderNumber": "Kl 3895",
+    "DateTime": "2022-11-18 16:51:11",
+    "PaymentOption": 2,
+    "Client": "7",
     "Itemss": [
       {
-        "Description": "Aliejus",
-        "Quantyti": 256,
-        "Price": 78.25,
-        "RowTotal": 20032.0
-      },
-      {
-        "Description": "Varske",
+        "Description": "Cofe",
         "Quantyti": 258,
-        "Price": 45.25,
-        "RowTotal": 11674.5
+        "Price": 2.57,
+        "RowTotal": 663.06
       }
     ],
-    "InvoiceTotal": 31706.5,
-    "QtyTotal": 514
+    "InvoiceTotal": 663.06,
+    "QtyTotal": 258
+  },
+  {
+    "Id": 20,
+    "OrderNumber": "Kl 8215",
+    "DateTime": "2022-11-21 19:08:31",
+    "PaymentOption": 6,
+    "Client": "20",
+    "Itemss": [
+      {
+        "Description": "MilkShake",
+        "Quantyti": 20,
+        "Price": 1.99,
+        "RowTotal": 39.8
+      },
+      {
+        "Description": "Tea",
+        "Quantyti": 66,
+        "Price": 2.69,
+        "RowTotal": 177.54
+      }
+    ],
+    "InvoiceTotal": 217.34,
+    "QtyTotal": 86
+  },
+  {
+    "Id": 22,
+    "OrderNumber": "Kl 3815",
+    "DateTime": "2022-11-21 19:25:15",
+    "PaymentOption": 5,
+    "Client": "22",
+    "Itemss": [
+      {
+        "Description": "Burger",
+        "Quantyti": 20,
+        "Price": 2.0,
+        "RowTotal": 40.0
+      },
+      {
+        "Description": "MilkShake",
+        "Quantyti": 58,
+        "Price": 1.99,
+        "RowTotal": 115.42
+      }
+    ],
+    "InvoiceTotal": 155.42,
+    "QtyTotal": 78
+  },
+  {
+    "Id": 25,
+    "OrderNumber": "Kl 6125",
+    "DateTime": "2022-11-21 19:34:02",
+    "PaymentOption": 2,
+    "Client": "25",
+    "Itemss": [
+      {
+        "Description": "Cepelinai",
+        "Quantyti": 10,
+        "Price": 6.99,
+        "RowTotal": 69.9
+      },
+      {
+        "Description": "Meat balls ",
+        "Quantyti": 2,
+        "Price": 3.99,
+        "RowTotal": 7.98
+      },
+      {
+        "Description": "Cofe",
+        "Quantyti": 15,
+        "Price": 2.57,
+        "RowTotal": 38.55
+      }
+    ],
+    "InvoiceTotal": 116.43,
+    "QtyTotal": 27
+  },
+  {
+    "Id": 32,
+    "OrderNumber": "Kl 2299",
+    "DateTime": "2022-11-21 21:42:01",
+    "PaymentOption": 1,
+    "Client": "32",
+    "Itemss": [
+      {
+        "Description": "Burger",
+        "Quantyti": 2,
+        "Price": 2.0,
+        "RowTotal": 4.0
+      },
+      {
+        "Description": "Pizza",
+        "Quantyti": 10,
+        "Price": 2.56,
+        "RowTotal": 25.6
+      },
+      {
+        "Description": "Icecream",
+        "Quantyti": 1,
+        "Price": 2.59,
+        "RowTotal": 2.59
+      },
+      {
+        "Description": "Soup",
+        "Quantyti": 2,
+        "Price": 2.99,
+        "RowTotal": 5.98
+      },
+      {
+        "Description": "Cepelinai",
+        "Quantyti": 10,
+        "Price": 6.99,
+        "RowTotal": 69.9
+      },
+      {
+        "Description": "Soup Saltibarsciai",
+        "Quantyti": 10,
+        "Price": 5.49,
+        "RowTotal": 54.9
+      },
+      {
+        "Description": "Meat balls ",
+        "Quantyti": 5,
+        "Price": 3.99,
+        "RowTotal": 19.95
+      },
+      {
+        "Description": "Sprite",
+        "Quantyti": 5,
+        "Price": 2.0,
+        "RowTotal": 10.0
+      },
+      {
+        "Description": "Cofe",
+        "Quantyti": 3,
+        "Price": 2.57,
+        "RowTotal": 7.71
+      },
+      {
+        "Description": "Tea",
+        "Quantyti": 2,
+        "Price": 2.69,
+        "RowTotal": 5.38
+      },
+      {
+        "Description": "MilkShake",
+        "Quantyti": 2,
+        "Price": 1.99,
+        "RowTotal": 3.98
+      }
+    ],
+    "InvoiceTotal": 209.99,
+    "QtyTotal": 52
+  },
+  {
+    "Id": 22,
+    "OrderNumber": "Kl 7564",
+    "DateTime": "2022-11-23 19:39:17",
+    "PaymentOption": 5,
+    "Client": "22",
+    "Itemss": [
+      {
+        "Description": "Soup",
+        "Quantyti": 10,
+        "Price": 2.99,
+        "RowTotal": 29.9
+      },
+      {
+        "Description": "MilkShake",
+        "Quantyti": 5,
+        "Price": 1.99,
+        "RowTotal": 9.95
+      },
+      {
+        "Description": "Pizza",
+        "Quantyti": 5,
+        "Price": 2.56,
+        "RowTotal": 12.8
+      }
+    ],
+    "InvoiceTotal": 52.65,
+    "QtyTotal": 20
+  },
+  {
+    "Id": 7,
+    "OrderNumber": "Kl 7736",
+    "DateTime": "2022-11-23 19:43:07",
+    "PaymentOption": 2,
+    "Client": "7",
+    "Itemss": [
+      {
+        "Description": "Burger",
+        "Quantyti": 20,
+        "Price": 2.0,
+        "RowTotal": 40.0
+      },
+      {
+        "Description": "Meat balls ",
+        "Quantyti": 5,
+        "Price": 3.99,
+        "RowTotal": 19.95
+      }
+    ],
+    "InvoiceTotal": 59.95,
+    "QtyTotal": 25
   }
 ]

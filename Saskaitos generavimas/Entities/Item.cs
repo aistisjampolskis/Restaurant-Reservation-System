@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Saskaitos_generavimas.Entities
+namespace RestaurantReservationSystem.Entities
 {
     public class Item
     {
@@ -12,17 +12,21 @@ namespace Saskaitos_generavimas.Entities
         public int InvoiceId { get; set; } 
         public string Description { get; set; }
         public double Price { get; set; }
-        public string Producer { get; set; }
+        public int FileStatus { get; set; }
 
-        public Item(int id, int invoiceId, string description, double price, string producer)
+        public Item(int id, int invoiceId, string description, double price, int producer)
         {
             Id = id;
             InvoiceId = invoiceId;
             Description = description;
             Price = price;
-            Producer = producer;
+            FileStatus = producer;
         }
 
-       
+        public Item()
+        {
+        }
+
+
     }
 }

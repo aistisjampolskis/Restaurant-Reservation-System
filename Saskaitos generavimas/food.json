@@ -1,0 +1,51 @@
+[
+  {
+    "Id": 1,
+    "InvoiceId": 0,
+    "Description": "Burger",
+    "Price": 2.0,
+    "FileStatus": 1
+  },
+  {
+    "Id": 2,
+    "InvoiceId": 0,
+    "Description": "Pizza",
+    "Price": 2.56,
+    "FileStatus": 1
+  },
+  {
+    "Id": 3,
+    "InvoiceId": 0,
+    "Description": "Icecream",
+    "Price": 2.59,
+    "FileStatus": 1
+  },
+  {
+    "Id": 4,
+    "InvoiceId": 0,
+    "Description": "Soup",
+    "Price": 2.99,
+    "FileStatus": 1
+  },
+  {
+    "Id": 5,
+    "InvoiceId": 0,
+    "Description": "Cepelinai",
+    "Price": 6.99,
+    "FileStatus": 1
+  },
+  {
+    "Id": 6,
+    "InvoiceId": 0,
+    "Description": "Soup Saltibarsciai",
+    "Price": 5.49,
+    "FileStatus": 1
+  },
+  {
+    "Id": 7,
+    "InvoiceId": 0,
+    "Description": "Meat balls ",
+    "Price": 3.99,
+    "FileStatus": 1
+  }
+]

@@ -4,16 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json;
+using RestaurantReservationSystem.Repositories;
 
-namespace Saskaitos_generavimas
+namespace RestaurantReservationSystem
 {
     public class GetFullInvoisingById
     {
-        public void GetFullINvoiceById()
+        public int GetFullINvoiceById()
         {
-            Console.WriteLine("Enter invoice Id");
+            Console.WriteLine("Enter table ID");
             int invoiceId = Convert.ToInt32(Console.ReadLine());
-            using (StreamReader r = new StreamReader(@"C:\Users\aisti\OneDrive\Desktop\C#\Strukturos 2022-09-26\Saskaitos generavimas\Saskaitos generavimas\Saskaitos generavimas\Invoice.json"))
+            using (StreamReader r = new StreamReader(@"C:\Users\aisti\OneDrive\Desktop\C# Advanced\reservationtable\Saskaitos generavimas\Invoice.json"))
             {
                 string json = r.ReadToEnd();
                 var incoming33 = JsonSerializer.Deserialize<List<ItemOnInvoice>>(json);
@@ -21,18 +22,21 @@ namespace Saskaitos_generavimas
                 {
                     if (items.Id == invoiceId)
                     {
-                        Console.WriteLine($"Customer {items.Client}, Order number {items.OrderNumber}, Date {items.DateTime}, Payment terms {items.PaymentOption}, Invoice total {items.InvoiceTotal}");
+                        Console.WriteLine($"Table {items.Client}, Order number {items.OrderNumber}, Date {items.DateTime}, Table Size {items.PaymentOption}, Invoice total {items.InvoiceTotal} Euro ");
                         foreach (var itemms in items.Itemss)
                         {
                             var rowTotalr = (float)Math.Round(itemms.RowTotal * 100f) / 100f;
 
-                            Console.WriteLine($"Item {itemms.Description}, Quatyti {itemms.Quantyti}, Price {itemms.Price} Total row {rowTotalr}");
+                            Console.WriteLine($"Item {itemms.Description}, Quatyti {itemms.Quantyti}, Price {itemms.Price} Euro Total row {rowTotalr} Euro");
                         }
                         var InvoiceTotalr = (float)Math.Round(items.InvoiceTotal * 100f) / 100f;
-                        Console.WriteLine($"Invoice total {InvoiceTotalr}");
-                        Console.WriteLine($"Item qty {items.QtyTotal}");
+                        Console.WriteLine($"Invoice total {InvoiceTotalr} Euro");
+                        Console.WriteLine($"Item qty {items.QtyTotal} pcs");
+                       
                     }
                 }
+                
+                return invoiceId;
             }
         }
     }

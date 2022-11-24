@@ -1,72 +1,177 @@
 [
   {
-    "Id": 1,
-    "Address": "Balbieriškis",
-    "DateTime": "2022-01-19",
-    "PaymentTerms": 30,
-    "Client": "Šilas"
+    "Id": 2,
+    "DateTime": "2022-11-17 16:30",
+    "TableSeats": 6,
+    "Client": "2",
+    "TableStatus": 1
   },
   {
-    "Id": 2,
-    "Address": "Kaunas",
-    "DateTime": "2021-10-19",
-    "PaymentTerms": 45,
-    "Client": "Maxima"
+    "Id": 1,
+    "DateTime": "2022-11-17 10:30",
+    "TableSeats": 6,
+    "Client": "1",
+    "TableStatus": 1
   },
   {
     "Id": 3,
-    "Address": "Jonava",
-    "DateTime": "2022-12-19",
-    "PaymentTerms": 60,
-    "Client": "Iki"
+    "DateTime": "2022-11-17 21:32",
+    "TableSeats": 6,
+    "Client": "3",
+    "TableStatus": 1
   },
   {
     "Id": 4,
-    "Address": "Klaipeda",
-    "DateTime": "2021-09-19",
-    "PaymentTerms": 90,
-    "Client": "Depo"
+    "DateTime": "2022-11-17 16:30",
+    "TableSeats": 3,
+    "Client": "4",
+    "TableStatus": 1
   },
   {
     "Id": 5,
-    "Address": "Panevezys",
-    "DateTime": "2019-10-19",
-    "PaymentTerms": 30,
-    "Client": "Senukai"
+    "DateTime": "2022-11-17 21:43",
+    "TableSeats": 4,
+    "Client": "5",
+    "TableStatus": 0
   },
   {
     "Id": 6,
-    "Address": "Zatyšiai",
-    "DateTime": "2001-10-19",
-    "PaymentTerms": 30,
-    "Client": "Rimi"
+    "DateTime": "2022-11-17 21:45",
+    "TableSeats": 5,
+    "Client": "6",
+    "TableStatus": 1
   },
   {
     "Id": 7,
-    "Address": "Alytus",
-    "DateTime": "2002-10-19",
-    "PaymentTerms": 120,
-    "Client": "Kesko"
+    "DateTime": "2022-11-17 22:25",
+    "TableSeats": 2,
+    "Client": "7",
+    "TableStatus": 0
   },
   {
     "Id": 8,
-    "Address": "Vilnius",
-    "DateTime": "2008-10-19",
-    "PaymentTerms": 90,
-    "Client": "Sanitex"
+    "DateTime": "2022-11-17 12:25",
+    "TableSeats": 2,
+    "Client": "8",
+    "TableStatus": 1
   },
   {
-    "Id": 13,
-    "Address": "Vilnius",
-    "DateTime": "2008-10-19",
-    "PaymentTerms": 90,
-    "Client": "Procter"
+    "Id": 9,
+    "DateTime": "2022-12-12 23:30",
+    "TableSeats": 6,
+    "Client": "9",
+    "TableStatus": 1
   },
   {
-    "Id": 12547,
-    "Address": "Kedainiai",
-    "DateTime": "2001-12-31",
-    "PaymentTerms": 30,
-    "Client": "Lifosa"
+    "Id": 11,
+    "DateTime": "2022-11-23 11:20",
+    "TableSeats": 6,
+    "Client": "11",
+    "TableStatus": 1
+  },
+  {
+    "Id": 21,
+    "DateTime": "2022-10-12 12:20",
+    "TableSeats": 5,
+    "Client": "21",
+    "TableStatus": 1
+  },
+  {
+    "Id": 22,
+    "DateTime": "2022-11-21",
+    "TableSeats": 5,
+    "Client": "22",
+    "TableStatus": 1
+  },
+  {
+    "Id": 20,
+    "DateTime": "2022-11-25",
+    "TableSeats": 6,
+    "Client": "20",
+    "TableStatus": 0
+  },
+  {
+    "Id": 23,
+    "DateTime": "2022-11-25",
+    "TableSeats": 4,
+    "Client": "23",
+    "TableStatus": 1
+  },
+  {
+    "Id": 24,
+    "DateTime": "2022-11-25",
+    "TableSeats": 4,
+    "Client": "24",
+    "TableStatus": 1
+  },
+  {
+    "Id": 25,
+    "DateTime": "2022-11-22",
+    "TableSeats": 6,
+    "Client": "25",
+    "TableStatus": 0
+  },
+  {
+    "Id": 26,
+    "DateTime": "2010",
+    "TableSeats": 2,
+    "Client": "26",
+    "TableStatus": 0
+  },
+  {
+    "Id": 27,
+    "DateTime": "1983",
+    "TableSeats": 1,
+    "Client": "27",
+    "TableStatus": 0
+  },
+  {
+    "Id": 28,
+    "DateTime": "2018",
+    "TableSeats": 2,
+    "Client": "28",
+    "TableStatus": 0
+  },
+  {
+    "Id": 29,
+    "DateTime": "2001-01-07",
+    "TableSeats": 3,
+    "Client": "29",
+    "TableStatus": 0
+  },
+  {
+    "Id": 30,
+    "DateTime": "1999-01-01",
+    "TableSeats": 1,
+    "Client": "30",
+    "TableStatus": 0
+  },
+  {
+    "Id": 31,
+    "DateTime": "1969-01-01",
+    "TableSeats": 1,
+    "Client": "31",
+    "TableStatus": 0
+  },
+  {
+    "Id": 32,
+    "DateTime": "1955-01-01",
+    "TableSeats": 1,
+    "Client": "32",
+    "TableStatus": 0
+  },
+  {
+    "Id": 33,
+    "DateTime": "1111-11-11",
+    "TableSeats": 1,
+    "Client": "33",
+    "TableStatus": 0
+  },
+  {
+    "Id": 34,
+    "DateTime": "2022-11-24",
+    "TableSeats": 5,
+    "Client": "34",
+    "TableStatus": 0
   }
 ]

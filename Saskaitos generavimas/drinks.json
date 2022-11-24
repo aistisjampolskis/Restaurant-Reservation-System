@@ -1,0 +1,30 @@
+[
+  {
+    "Id": 2100,
+    "InvoiceId": 0,
+    "Description": "Sprite",
+    "Price": 2.0,
+    "FileStatus": 2
+  },
+  {
+    "Id": 2101,
+    "InvoiceId": 0,
+    "Description": "Cofe",
+    "Price": 2.57,
+    "FileStatus": 2
+  },
+  {
+    "Id": 2102,
+    "InvoiceId": 0,
+    "Description": "Tea",
+    "Price": 2.69,
+    "FileStatus": 2
+  },
+  {
+    "Id": 2103,
+    "InvoiceId": 0,
+    "Description": "MilkShake",
+    "Price": 1.99,
+    "FileStatus": 2
+  }
+]

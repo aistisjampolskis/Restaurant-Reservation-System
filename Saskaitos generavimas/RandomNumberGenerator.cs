@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Saskaitos_generavimas
+namespace RestaurantReservationSystem
 {
     public class RandomNumberGenerator
     {
@@ -13,7 +13,6 @@ namespace Saskaitos_generavimas
                 Random rnd = new Random();
                 for (int j = 0; j < 1; j++)
                 {
-                    
                 }
             return rnd.Next(10000);
             }

@@ -1,8 +1,8 @@
-﻿using Saskaitos_generavimas;
-using Saskaitos_generavimas.Entities;
-using Saskaitos_generavimas.Repositories;
-using Saskaitos_generavimas.Entities;
-using Saskaitos_generavimas.Repositories;
+﻿using RestaurantReservationSystem;
+using RestaurantReservationSystem.Entities;
+using RestaurantReservationSystem.Repositories;
+using RestaurantReservationSystem.Entities;
+using RestaurantReservationSystem.Repositories;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using System.IO;
@@ -16,16 +16,15 @@ using static System.Formats.Asn1.AsnWriter;
 using System.Text.Encodings.Web;
 using System.Text.Unicode;
 using System.ComponentModel;
-using Saskaitos_generavimas;
+using RestaurantReservationSystem;
 using System.Text;
-using QuickType;
 using System.Linq;
 using System.Collections.Immutable;
 using System.Diagnostics;
 
 
 
-namespace Saskaitos_generavimas
+namespace RestaurantReservationSystem
 {
 
     public class Control
@@ -48,10 +47,13 @@ namespace Saskaitos_generavimas
             CustomerRaportation customerRaportation = new CustomerRaportation();
             InvoicingRaportation invoicingRaportation = new InvoicingRaportation();
             GetFullInvoisingById getFullInvoisingById = new GetFullInvoisingById();
+            Mail mail = new Mail();
+            Receipt receipt = new Receipt(mail);
+
             bool toDoProgram = true;
             while (toDoProgram)
             {
-                Console.WriteLine("[1] Create Invoice\n[2] Create item\n[3] Create customer\n[4] Invoice Raport \n[5] Item Raport\n[6] Customer Raport \n[7] See Invoice by ID\n[8] Finish the program");
+                Console.WriteLine("[1] Create Customer Order\n[2] Create meniu\n[3] Table managment\n[4] Order Raport \n[5] Item Raport\n[6] Table Raport \n[7] See Order by Table\n[8] Receipt \n[9] Finish the program");
                 int action = int.Parse(Console.ReadLine());
                 switch (action)
                 {
@@ -74,9 +76,12 @@ namespace Saskaitos_generavimas
                         customerRaportation.CustomerRaport();
                         break;
                     case 7:
-                        getFullInvoisingById.GetFullINvoiceById();
+                      getFullInvoisingById.GetFullINvoiceById();
                         break;
                     case 8:
+                        receipt.ReceiptSolution();
+                        break;
+                    case 9:
                         toDoProgram = false;
                         break;
                     default:

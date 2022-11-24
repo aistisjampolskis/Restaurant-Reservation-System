@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using Saskaitos_generavimas.Entities;
-using Saskaitos_generavimas.Repositories;
+using RestaurantReservationSystem.Entities;
+using RestaurantReservationSystem.Repositories;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using System.IO;
@@ -14,9 +14,8 @@ using static System.Formats.Asn1.AsnWriter;
 using System.Text.Encodings.Web;
 using System.Text.Unicode;
 using System.ComponentModel;
-using Saskaitos_generavimas;
+using RestaurantReservationSystem;
 using System.Text;
-using QuickType;
 using System.Linq;
 using System.Collections.Immutable;
 using System.Diagnostics;

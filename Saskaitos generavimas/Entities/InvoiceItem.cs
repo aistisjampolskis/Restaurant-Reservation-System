@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Saskaitos_generavimas.Entities
+namespace RestaurantReservationSystem.Entities
 {
     public class InvoiceItem
     {

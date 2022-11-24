@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.IO.Pipes;
 using System.Linq;
 using System.Text;
 using System.Text.Encodings.Web;
@@ -7,30 +9,19 @@ using System.Text.Json;
 using System.Text.Unicode;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using Saskaitos_generavimas.Entities;
+using Newtonsoft.Json.Linq;
+using RestaurantReservationSystem.Entities;
 
 
-namespace Saskaitos_generavimas.Repositories
+namespace RestaurantReservationSystem.Repositories
 {
     public class CustomerRepository
     {
-        
+
         private List<Customer> Invoices { get; set; } = new List<Customer>();
         public CustomerRepository()
         {
-            Invoices.Add(new Customer(1, "Balbieriškis", "2022-01-19", 30, "Šilas"));
-            Invoices.Add(new Customer(2, "Kaunas", "2021-10-19", 45, "Maxima"));
-            Invoices.Add(new Customer(3, "Jonava", "2022-12-19", 60, "Iki"));
-            Invoices.Add(new Customer(4, "Klaipeda", "2021-09-19", 90, "Depo"));
-            Invoices.Add(new Customer(5, "Panevezys", "2019-10-19", 30, "Senukai"));
-            Invoices.Add(new Customer(6, "Zatyšiai", "2001-10-19", 30, "Rimi"));
-            Invoices.Add(new Customer(7, "Alytus", "2002-10-19", 120, "Kesko"));
-            Invoices.Add(new Customer(8, "Vilnius", "2008-10-19", 90, "Sanitex"));
-            Invoices.Add(new Customer(13, "Vilnius", "2008-10-19", 90, "Procter"));
-
             
-
-
         }
         public List<Customer> RetrieveList()
         {
@@ -44,20 +35,116 @@ namespace Saskaitos_generavimas.Repositories
 
         public void Save(Customer customer)
         {
-           // Invoices.Add(customer);
+
             var options = new JsonSerializerOptions
             {
                 Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.All),
                 WriteIndented = true
             };
-            string path = @"C:\Users\aisti\OneDrive\Desktop\C#\Strukturos 2022-09-26\Saskaitos generavimas\Saskaitos generavimas\Saskaitos generavimas\Customers.json";
+            string path = @"C:\Users\aisti\OneDrive\Desktop\C# Advanced\reservationtable\Saskaitos generavimas\Customers.json";
             var jsonString = File.ReadAllText(path);
             var list = JsonConvert.DeserializeObject<List<Customer>>(jsonString);
-            list.Add(customer);
+            string client = customer.Client;
+            var cheking = list.Where(x => x.Client == customer.Client);
+            
+            if (cheking.Any())
+                    Console.WriteLine("Table already exist");
+               else
+                    list.Add(customer);
+                    var convertedJson = JsonConvert.SerializeObject(list, Formatting.Indented);
+                    File.WriteAllText(path, convertedJson);
+        }
+        public string ReadFromFileCustomers()
+        {
+            var options = new JsonSerializerOptions
+            {
+                Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.All),
+                WriteIndented = true
+            };
+            string path = @"C:\Users\aisti\OneDrive\Desktop\C# Advanced\reservationtable\Saskaitos generavimas\Customers.json";
+            var jsonString = File.ReadAllText(path);
+            return jsonString;
+
+        }
+        public List<Customer> ChangeTableStatus(string jsonString, int yes)
+        {
+            var list = JsonConvert.DeserializeObject<List<Customer>>(jsonString);
+            list.Where(x => x.Id == yes).ToList().ForEach(x => x.TableStatus = 1);
+
+            return list;
+        }
+
+        public void WriteToFile(List<Customer> list)
+        {
+            string path = @"C:\Users\aisti\OneDrive\Desktop\C# Advanced\reservationtable\Saskaitos generavimas\Customers.json";
+
             var convertedJson = JsonConvert.SerializeObject(list, Formatting.Indented);
             File.WriteAllText(path, convertedJson);
         }
+        public void WriteToFileTestEmptyFile(Customer customer)
+        {
+            string path = @"C:\Users\aisti\OneDrive\Desktop\C# Advanced\reservationtable\Saskaitos generavimas\CustomersTest.json";
 
-       
+            var convertedJson = JsonConvert.SerializeObject(customer, Formatting.Indented);
+            File.WriteAllText(path, convertedJson);
+        }
+
+        public string ReadFromFileCustomersTesting()
+        {
+            var options = new JsonSerializerOptions
+            {
+                Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.All),
+                WriteIndented = true
+            };
+            string path = @"C:\Users\aisti\OneDrive\Desktop\C# Advanced\reservationtable\Saskaitos generavimas\CustomersTest.json";
+            var jsonString = File.ReadAllText(path);
+            return jsonString;
+
+        }
+        public List<Customer >UpdateTableStatus (string jsonString, int yes)
+        {
+        
+            var list = JsonConvert.DeserializeObject<List<Customer>>(jsonString);
+            list.Where(x => x.Id == yes).ToList().ForEach(x => x.TableStatus = 1);
+            return list;
+        }
+
+        public List<Customer> UpdateTableStatusAfterPayment(string jsonString, int passing)
+        {
+           var list = JsonConvert.DeserializeObject<List<Customer>>(jsonString);
+            list.Where(x => x.Id == passing).ToList().ForEach(x => x.TableStatus = 0);
+            return list;
+           
+        }
+        public int Load5(int Id)
+        {
+            var options = new JsonSerializerOptions
+            {
+                Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.All),
+                WriteIndented = true
+            };
+            string path = @"C:\Users\aisti\OneDrive\Desktop\C# Advanced\reservationtable\Saskaitos generavimas\Customers.json";
+            var jsonString = File.ReadAllText(path);
+            var list = JsonConvert.DeserializeObject<List<Customer>>(jsonString);
+            var item = list.FirstOrDefault(x => x.Id == Id);
+            var itemSeatingNumber = item.TableSeats;
+            return itemSeatingNumber;
+        }
+        public int Load6()
+        {
+            var options = new JsonSerializerOptions
+            {
+                Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.All),
+                WriteIndented = true
+            };
+            string path = @"C:\Users\aisti\OneDrive\Desktop\C# Advanced\reservationtable\Saskaitos generavimas\Customers.json";
+            var jsonString = File.ReadAllText(path);
+            var list = JsonConvert.DeserializeObject<List<Customer>>(jsonString);
+            var item = list.Last().Id;
+            var idNumber = item + 1;
+
+            return idNumber;
+
+        }
     }
 }

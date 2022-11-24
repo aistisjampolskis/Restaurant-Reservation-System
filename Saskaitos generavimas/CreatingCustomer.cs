@@ -1,5 +1,5 @@
-﻿using Saskaitos_generavimas.Entities;
-using Saskaitos_generavimas.Repositories;
+﻿using RestaurantReservationSystem.Entities;
+using RestaurantReservationSystem.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,62 +9,54 @@ using System.Text.Json;
 using System.Text.Unicode;
 using System.Threading.Tasks;
 
-namespace Saskaitos_generavimas
+namespace RestaurantReservationSystem
 {
     public class CreatingCustomer
     {
         CustomerRepository customerRepository = new CustomerRepository();
+
         public void CreateCustomer2()
         {
             List<Customer> Invoices = new List<Customer>();
             DateTime date1 = DateTime.Now;
             Console.Clear();
-            Console.WriteLine("Enter customer Id");
-            int id = Convert.ToInt32(Console.ReadLine());
+            int id = customerRepository.Load6();
+            Console.WriteLine($"Generating table Id = {id}");
+            Console.WriteLine("Enter Tables size/seat number");
+            int tableSeats = Convert.ToInt32(Console.ReadLine());
             while (true)
             {
-                if (id < 0)
+                if (tableSeats < 0 || tableSeats > 6)
                 {
-                    Console.WriteLine("Enter right Customer Id");
-                    id = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Enter right size of seat");
+                    tableSeats = Convert.ToInt32(Console.ReadLine());
                 }
                 else
                 {
                     break;
                 }
             }
-            Console.WriteLine("Enter address");
-            string address = Console.ReadLine();
-
-            Console.WriteLine("Enter Payment terms");
-            int paymentTerms = Convert.ToInt32(Console.ReadLine());
-            while (true)
-            {
-                if (paymentTerms < 0)
-                {
-                    Console.WriteLine("Enter right payment term");
-                    paymentTerms = Convert.ToInt32(Console.ReadLine());
-                }
-                else
-                {
-                    break;
-                }
-            }
-            Console.WriteLine("Enter customer name");
+            Console.WriteLine("Enter Table Number");
             string client = Console.ReadLine();
-            Console.WriteLine("Enter creation date");
+            Console.WriteLine("Enter reservation date");
             string dateTime = Console.ReadLine();
+            Console.WriteLine("Enter table status");
+            int tableStatus = Convert.ToInt32(Console.ReadLine());
+            while (true)
+            {
+                if (tableStatus < 0 || tableStatus > 1)
+                {
+                    Console.WriteLine("Enter right table status");
+                    tableStatus = Convert.ToInt32(Console.ReadLine());
+                }
+                else
+                {
+                    break;
+                }
+            }
 
-            customerRepository.Save(new Customer(id, address, dateTime, paymentTerms, client));
-            /* var options = new JsonSerializerOptions
-             {
-                 Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.All),
-                 WriteIndented = true
-             };
-             var jsonString = JsonSerializer.Serialize(customerRepository.RetrieveList(), options);
-             File.WriteAllText(@"C:\Users\aisti\OneDrive\Desktop\C#\Strukturos 2022-09-26\Saskaitos generavimas\Saskaitos generavimas\Saskaitos generavimas\Customers.json", jsonString);
-             Console.WriteLine("Customer.json file created");
-         }*/
+            customerRepository.Save(new Customer(id, dateTime, tableSeats, client, tableStatus));
+
         }
     }
 }
